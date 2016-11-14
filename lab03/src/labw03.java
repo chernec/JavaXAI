@@ -34,6 +34,7 @@ public class labw03 implements var04 {
 	}
  
 	public void massivy(double[] A, double D) {
+
 		// Найти элемент массива A, модуль разницы которого с D минимален
 		double[] B = new double[A.length];
 		
@@ -41,12 +42,18 @@ public class labw03 implements var04 {
 			B[i] = Math.abs(A[i] - D);
 		}
 		
-		double min = A[0];
+		double min = B[0];
+
+		int num=0;
 		for(int i = 0; i < B.length; i++){
-            if(min > B[i])
+			System.out.println("Разницы: " + B[i]);
+            if(min > B[i]){
                 min = B[i];
+				num=i;
+            }
 		}
-		System.out.println("Минимальный элемент массива №: " + (int)min);
+
+		System.out.println("Минимальный элемент массива №: " + num);
 		
 	}
   	
